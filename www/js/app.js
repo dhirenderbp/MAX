@@ -19,7 +19,7 @@ var app = angular.module('starter', ['ionic', 'ngResource','ngCordova'])
     $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS demo (id integer primary key, firstname text)");
   });
 })
-.controller('userCTRL',['APIFactory','$scope','',function(APIFactory,$scope,$cordovaSQLite){
+.controller('userCTRL',['APIFactory','$scope','$cordovaSQLite',function(APIFactory,$scope,$cordovaSQLite){
   APIFactory.GetUsers({},function(err,result){
     console.log('result ' , result);
   })
